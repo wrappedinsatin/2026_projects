@@ -1,3 +1,6 @@
+# i designed the game to practice creating 'complete' programs
+# it's relatively simple 
+
 import random
 
 smallest_num = 1
