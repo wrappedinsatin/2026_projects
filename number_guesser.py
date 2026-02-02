@@ -17,7 +17,7 @@ while is_running:
 
     while guess.isdigit():
         
-        while not 1 <= guess <= 100:
+        while 1 <= guess <= 100:
             if guess == correct_num:
                 print(f"{guess} was the correct number!")
                 is_running = False
