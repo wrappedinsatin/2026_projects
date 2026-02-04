@@ -37,7 +37,7 @@ while is_running:
         print(f"your guess must be an integer between {smallest_num} and {largest_num}")
         guess = int(input("make your guess!: "))
 
-play_again = input("would you like to play again? y/n: ")
+play_again = input("would you like to play again? y/n: ").lower()
 if play_again.lower == y:
     print("new game started!")
     is_running = True
