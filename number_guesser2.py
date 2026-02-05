@@ -7,7 +7,7 @@ biggest_num = 100
 
 def play_game():
     
-    correct_num = random.randint(1, 100)
+    correct_num = random.randint({smallest_num}, {biggest_num})
     print("welcome to my number guessing game!")
     print(f"select a number between {smallest_num} and {biggest_num}")
 
@@ -18,12 +18,9 @@ def play_game():
         except ValueError:
             print(f"{guess} was not valid!")
             print(f"your guess must be an INTEGER between {smallest_num} and {biggest_num}")
-        except Exception:
-            print("something went wrong!")
-            print(f"make sure you typed in an integer between {smallest_num} and {biggest_num}!")
-        continue
+            continue
     
-        if not (1 <= guess <= 100):
+        if not ({smallest_num} <= guess <= {biggest_num}):
             print(f"{guess} is out of range!")
             print(f"make sure you typed in an integer between {smallest_num} and {biggest_num}!")
         else:
@@ -44,12 +41,12 @@ def main():
         play_again = input("would you like to play again? y/n: ").lower()
         if play_again == "y":
             print("new game started!")
-            play_game()
+            break # breaks inner loop, play_game() is executed
         elif play_again == "n":
             print("thanks for playing!")
             break
         else:
-            pass
+            print("please select y or n")
 
 if __name__ == "__main__":
     main()
