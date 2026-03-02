@@ -1,12 +1,12 @@
 
 def ranks(num):
     
-    rank = ""
-    square = 1
-
     if len(rank) == num and rank[0] == "1":
         rank = ""
         square = 0
+    else:
+        rank = ""
+        square = 1
 
     while not len(rank) > num:
         rank += str(square)
@@ -18,7 +18,6 @@ def ranks(num):
         if len(rank) == num:
             print(rank)
             break
-
 
 def chessboard(num):
     rep = 0
