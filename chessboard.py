@@ -1,36 +1,22 @@
 
-def ranks(num):
-
-    while not len(rank) > num:
-        rank += str(square)
-        square -= 1
-
-        if square < 0:
-            square = 1
-
-        if len(rank) == num:
-            print(rank)
-            break
-
-    return rank
-
-def repeat(rank):
-
-    if rank[0] == "0":
-        rank = ""
-        square = 0
-        ranks(num)
-
-    else:
-        rank = ""
-        square = 1
-        ranks(num)
-
 def chessboard(num):
-    rep = 0
-    while rep < num:
-        repeat(rank)
-        rep += 1
+    
+    rank1 = ""
+    rank2 = ""
+
+    for i in range(num):
+        if i % 2 == 0: # even or odd
+            rank1 += "1"
+            rank2 += "0"
+        else:
+            rank1 += "0"
+            rank2 += "1"
+
+    for i in range(num):
+        if i % 2 == 0:
+            print(rank1)
+        else:
+            print(rank2)
 
 if __name__ == "__main__":
-    chessboard(num)
+    chessboard(3)
