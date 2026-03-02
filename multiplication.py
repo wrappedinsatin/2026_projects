@@ -7,9 +7,14 @@ j = 1
 
 while i < num:
 
-    while j < num:
+    while True:
+
         print(f"{i} x {j} = {i * j}")
         j += 1
 
-    i += 1
-    j = 1
+        if j > num:
+            i += 1
+            j = 1
+
+        if i > num:
+            break
